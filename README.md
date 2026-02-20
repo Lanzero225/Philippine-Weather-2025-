@@ -1558,7 +1558,7 @@ baseline for further optimization.
     misleadingly high accuracy while performing poorly in identifying
     actual rain events.
 
-1.  Use More Advanced Models Instead of RFA
+2.  Use More Advanced Models Instead of RFA
 
 -   Next, while Random Forest (RFA) provides a strong baseline, more
     advanced models may yield better performance, especially when
