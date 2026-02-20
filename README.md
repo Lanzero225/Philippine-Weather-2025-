@@ -19,7 +19,6 @@ jupyter:
   nbformat_minor: 5
 ---
 
-::: {#411Bqtcd78hL .cell .markdown id="411Bqtcd78hL"}
 # Philippine Weather Analysis (2025)
 
 The Philippines is a tropical country located in Southeast Asia,
