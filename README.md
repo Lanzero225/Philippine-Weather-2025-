@@ -18,16 +18,12 @@ preparedness, urban planning, and climate-related decision-making.
 
 Additionally, a simple model will also be built to predict the occurence
 of rain, trained using the dataset.
-:::
 
-::: {#PnydfdDO9k9s .cell .markdown id="PnydfdDO9k9s"}
 # Data Importing
 
 To begin first, I will import the necessary libraries to begin this
 analysis.
-:::
 
-::: {#296fdf4b .cell .code execution_count="3" id="296fdf4b"}
 ``` python
 import pandas as pd
 import numpy as np
