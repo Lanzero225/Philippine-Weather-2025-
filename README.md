@@ -1,6 +1,5 @@
 
 
-::: {#411Bqtcd78hL .cell .markdown id="411Bqtcd78hL"}
 # Philippine Weather Analysis (2025)
 
 The Philippines is a tropical country located in Southeast Asia,
@@ -20,25 +19,19 @@ preparedness, urban planning, and climate-related decision-making.
 
 Additionally, a simple model will also be built to predict the occurence
 of rain, trained using the dataset.
-:::
 
-::: {#PnydfdDO9k9s .cell .markdown id="PnydfdDO9k9s"}
 # Data Importing
 
 To begin first, I will import the necessary libraries to begin this
 analysis.
-:::
 
-::: {#296fdf4b .cell .code execution_count="3" id="296fdf4b"}
 ``` python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
-:::
 
-::: {#eoTo61QgOTSg .cell .markdown id="eoTo61QgOTSg"}
 The dataset used for this analysis uses a dataset from Kaggle:
 
 -   <https://www.kaggle.com/datasets/bwandowando/philippine-major-cities-weather-data-2025>
@@ -56,9 +49,7 @@ personal repository for easy access, which can be accessed with:
 
 After which, the csv file will be converted into a DataFrame and
 aggregated into a singular DataFrame.
-:::
 
-::: {#4b516b71 .cell .code execution_count="4" id="4b516b71"}
 ``` python
 
 directories = pd.period_range('2025-01', '2025-12', freq='M').strftime('%Y%m').tolist()
@@ -74,9 +65,7 @@ for i in directories:
 
 weather_dataframe = pd.concat(dfs, ignore_index=True)
 ```
-:::
 
-::: {#k4nWGCk_-wBv .cell .markdown id="k4nWGCk_-wBv"}
 Looking initially into the code, we see that there are columns with
 missing values and mismatched datatypes.
 
@@ -91,14 +80,11 @@ Datatype Mismatch:
 -   datetime
 -   sys.sunrise
 -   sys.sunset
-:::
 
-::: {#017dca8d .cell .code execution_count="5" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="017dca8d" outputId="c722b662-94d0-4229-f1ff-5d30b502f580"}
 ``` python
 weather_dataframe.info(show_counts=True)
 ```
 
-::: {.output .stream .stdout}
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 1066627 entries, 0 to 1066626
     Data columns (total 20 columns):
@@ -126,10 +112,8 @@ weather_dataframe.info(show_counts=True)
      19  rain.1h              81194 non-null    float64
     dtypes: float64(14), object(6)
     memory usage: 162.8+ MB
-:::
-:::
 
-::: {#UHUdjVmf62bE .cell .code execution_count="6" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":313}" id="UHUdjVmf62bE" outputId="7a674b5c-85c8-4ff3-8b57-c217d44a4cb5"}
+
 ``` python
 weather_dataframe.head()
 ```
